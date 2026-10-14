@@ -1,0 +1,33 @@
+
+[
+    {
+        "migration": "AWS EKS to Google GKE",
+        "metrics": {
+            "yaml_change_percent": 20,
+            "manual_rewrites": 4,
+            "migration_time_minutes": 30,
+            "failed_deployments": 1,
+            "provider_dependencies": 3
+        }
+    },
+    {
+        "migration": "Google GKE to Azure AKS",
+        "metrics": {
+            "yaml_change_percent": 35,
+            "manual_rewrites": 7,
+            "migration_time_minutes": 45,
+            "failed_deployments": 2,
+            "provider_dependencies": 5
+        }
+    },
+    {
+        "migration": "AWS EKS to kubeadm baseline",
+        "metrics": {
+            "yaml_change_percent": 15,
+            "manual_rewrites": 2,
+            "migration_time_minutes": 20,
+            "failed_deployments": 0,
+            "provider_dependencies": 2
+        }
+    }
+]
