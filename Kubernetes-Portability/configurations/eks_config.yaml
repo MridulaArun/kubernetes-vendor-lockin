@@ -1,0 +1,26 @@
+platform: AWS EKS
+
+configurations:
+  - component: storage
+    setting: storage_class
+    value: gp3
+    category: provider_specific
+    reason: AWS EBS storage integration
+
+  - component: networking
+    setting: load_balancer
+    value: aws_network_load_balancer
+    category: provider_specific
+    reason: AWS load balancer integration
+
+  - component: identity
+    setting: workload_identity
+    value: eks_iam_roles_for_service_accounts
+    category: provider_specific
+    reason: AWS IAM integration using IRSA
+
+  - component: ingress
+    setting: ingress_controller
+    value: aws_load_balancer_controller
+    category: provider_specific
+    reason: AWS load balancer controller integration

@@ -1,0 +1,26 @@
+platform: Google GKE
+
+configurations:
+  - component: storage
+    setting: storage_class
+    value: standard-rwo
+    category: provider_specific
+    reason: Google Persistent Disk storage integration
+
+  - component: networking
+    setting: load_balancer
+    value: gke_cloud_load_balancing
+    category: provider_specific
+    reason: Google Cloud load balancing integration
+
+  - component: identity
+    setting: workload_identity
+    value: gke_workload_identity
+    category: provider_specific
+    reason: Google Cloud workload identity integration
+
+  - component: ingress
+    setting: ingress_controller
+    value: gke_ingress
+    category: provider_specific
+    reason: Google Cloud ingress integration

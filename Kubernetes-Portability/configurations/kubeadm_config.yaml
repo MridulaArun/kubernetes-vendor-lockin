@@ -1,0 +1,26 @@
+platform: Kubeadm
+
+configurations:
+  - component: storage
+    setting: storage_class
+    value: local_path
+    category: self_managed
+    reason: Locally managed storage provisioner
+
+  - component: networking
+    setting: load_balancer
+    value: metallb
+    category: self_managed
+    reason: Independently configured load balancer
+
+  - component: identity
+    setting: workload_identity
+    value: kubernetes_service_account
+    category: self_managed
+    reason: Standard Kubernetes service account
+
+  - component: ingress
+    setting: ingress_controller
+    value: nginx_ingress
+    category: self_managed
+    reason: Independently installed ingress controller

@@ -1,0 +1,34 @@
+{
+  "kubeadm": {
+    "name": "Kubeadm (Self-Hosted Baseline)",
+    "storage_plugin": "Local Storage Provisioner",
+    "ingress_controller": "Community NGINX Ingress",
+    "identity_provider": "Standard RBAC / ServiceAccount",
+    "load_balancer": "NodePort / ExternalIP",
+    "lock_in_level": "None"
+  },
+  "eks": {
+    "name": "AWS EKS",
+    "storage_plugin": "AWS EBS CSI Driver (gp3)",
+    "ingress_controller": "AWS Load Balancer Controller (ALB)",
+    "identity_provider": "IAM Roles for Service Accounts (IRSA)",
+    "load_balancer": "AWS NLB / ALB",
+    "lock_in_level": "High"
+  },
+  "gke": {
+    "name": "Google GKE",
+    "storage_plugin": "GCE Persistent Disk CSI Driver",
+    "ingress_controller": "GKE Ingress / Gateway API (GCLB)",
+    "identity_provider": "GCP Workload Identity",
+    "load_balancer": "Google Cloud Load Balancer",
+    "lock_in_level": "High"
+  },
+  "aks": {
+    "name": "Azure AKS",
+    "storage_plugin": "Azure Disk CSI Driver",
+    "ingress_controller": "Application Gateway Ingress Controller (AGIC)",
+    "identity_provider": "Azure Entra ID Pod Identity",
+    "load_balancer": "Azure Load Balancer / Application Gateway",
+    "lock_in_level": "High"
+  }
+}

@@ -1,0 +1,24 @@
+application:
+  name: student-management-app
+  namespace: default
+
+  deployment:
+    kind: Deployment
+    replicas: 2
+    image: nginx:latest
+    container_port: 80
+
+  service:
+    kind: Service
+    type: ClusterIP
+    port: 80
+    target_port: 80
+
+  storage:
+    kind: PersistentVolumeClaim
+    access_mode: ReadWriteOnce
+    storage_size: 5Gi
+
+  identity:
+    kind: ServiceAccount
+    name: student-app-account

@@ -1,0 +1,26 @@
+platform: Azure AKS
+
+configurations:
+  - component: storage
+    setting: storage_class
+    value: managed-csi
+    category: provider_specific
+    reason: Azure managed disk CSI integration
+
+  - component: networking
+    setting: load_balancer
+    value: azure_load_balancer
+    category: provider_specific
+    reason: Azure load balancing integration
+
+  - component: identity
+    setting: workload_identity
+    value: azure_workload_identity
+    category: provider_specific
+    reason: Microsoft Entra workload identity integration
+
+  - component: ingress
+    setting: ingress_controller
+    value: azure_application_gateway
+    category: provider_specific
+    reason: Azure Application Gateway integration

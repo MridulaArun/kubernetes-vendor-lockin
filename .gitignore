@@ -5,3 +5,6 @@ crash.log
 *.tfvars
 *.tfplan
 .terraform.lock.hcl
+.venv/
+__pycache__/
+**/tempCodeRunnerFile.py
