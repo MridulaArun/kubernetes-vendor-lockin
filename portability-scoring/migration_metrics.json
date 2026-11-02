@@ -1,58 +1,134 @@
-
 [
     {
-        "migration": "AWS EKS to Google GKE",
+        "source_platform": "AWS EKS",
+        "destination_platform": "Google GKE",
         "metrics": {
-            "portability_score_percent": 28,
             "yaml_change_percent": 65,
             "manual_rewrites": 14,
             "migration_time_hours": 18,
             "failed_deployments": 4,
-            "provider_dependencies": 8
-        }
-    },
-    {
-        "migration": "Google GKE to Azure AKS",
-        "metrics": {
-            "portability_score_percent": 15,
-            "yaml_change_percent": 82,
-            "manual_rewrites": 19,
-            "migration_time_hours": 32,
-            "failed_deployments": 7,
-            "provider_dependencies": 9
-        }
-    },
-    {
-        "migration": "Azure AKS to AWS EKS",
-        "metrics": {
-            "portability_score_percent": 20,
-            "yaml_change_percent": 75,
-            "manual_rewrites": 16,
-            "migration_time_hours": 26,
-            "failed_deployments": 5,
-            "provider_dependencies": 10
-        }
-    },
-    {
-        "migration": "Kubeadm baseline to AWS EKS",
-        "metrics": {
-            "portability_score_percent": 45,
-            "yaml_change_percent": 40,
-            "manual_rewrites": 8,
-            "migration_time_hours": 10,
-            "failed_deployments": 2,
             "provider_dependencies": 5
         }
     },
     {
-        "migration": "Azure AKS to kubeadm baseline",
+        "source_platform": "AWS EKS",
+        "destination_platform": "Azure AKS",
         "metrics": {
-            "portability_score_percent": 50,
+            "yaml_change_percent": 82,
+            "manual_rewrites": 19,
+            "migration_time_hours": 32,
+            "failed_deployments": 7,
+            "provider_dependencies": 6
+        }
+    },
+    {
+        "source_platform": "AWS EKS",
+        "destination_platform": "Kubeadm",
+        "metrics": {
             "yaml_change_percent": 35,
             "manual_rewrites": 6,
             "migration_time_hours": 8,
             "failed_deployments": 1,
             "provider_dependencies": 4
+        }
+    },
+    {
+        "source_platform": "Google GKE",
+        "destination_platform": "AWS EKS",
+        "metrics": {
+            "yaml_change_percent": 65,
+            "manual_rewrites": 14,
+            "migration_time_hours": 18,
+            "failed_deployments": 4,
+            "provider_dependencies": 5
+        }
+    },
+    {
+        "source_platform": "Google GKE",
+        "destination_platform": "Azure AKS",
+        "metrics": {
+            "yaml_change_percent": 82,
+            "manual_rewrites": 19,
+            "migration_time_hours": 32,
+            "failed_deployments": 7,
+            "provider_dependencies": 6
+        }
+    },
+    {
+        "source_platform": "Google GKE",
+        "destination_platform": "Kubeadm",
+        "metrics": {
+            "yaml_change_percent": 40,
+            "manual_rewrites": 8,
+            "migration_time_hours": 10,
+            "failed_deployments": 2,
+            "provider_dependencies": 4
+        }
+    },
+    {
+        "source_platform": "Azure AKS",
+        "destination_platform": "AWS EKS",
+        "metrics": {
+            "yaml_change_percent": 75,
+            "manual_rewrites": 16,
+            "migration_time_hours": 26,
+            "failed_deployments": 5,
+            "provider_dependencies": 6
+        }
+    },
+    {
+        "source_platform": "Azure AKS",
+        "destination_platform": "Google GKE",
+        "metrics": {
+            "yaml_change_percent": 75,
+            "manual_rewrites": 16,
+            "migration_time_hours": 26,
+            "failed_deployments": 5,
+            "provider_dependencies": 5
+        }
+    },
+    {
+        "source_platform": "Azure AKS",
+        "destination_platform": "Kubeadm",
+        "metrics": {
+            "yaml_change_percent": 35,
+            "manual_rewrites": 6,
+            "migration_time_hours": 8,
+            "failed_deployments": 1,
+            "provider_dependencies": 3
+        }
+    },
+    {
+        "source_platform": "Kubeadm",
+        "destination_platform": "AWS EKS",
+        "metrics": {
+            "yaml_change_percent": 40,
+            "manual_rewrites": 8,
+            "migration_time_hours": 10,
+            "failed_deployments": 2,
+            "provider_dependencies": 3
+        }
+    },
+    {
+        "source_platform": "Kubeadm",
+        "destination_platform": "Google GKE",
+        "metrics": {
+            "yaml_change_percent": 45,
+            "manual_rewrites": 9,
+            "migration_time_hours": 12,
+            "failed_deployments": 3,
+            "provider_dependencies": 3
+        }
+    },
+    {
+        "source_platform": "Kubeadm",
+        "destination_platform": "Azure AKS",
+        "metrics": {
+            "yaml_change_percent": 50,
+            "manual_rewrites": 10,
+            "migration_time_hours": 14,
+            "failed_deployments": 3,
+            "provider_dependencies": 3
         }
     }
 ]

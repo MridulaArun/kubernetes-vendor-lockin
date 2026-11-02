@@ -25,6 +25,11 @@ SCRIPT_RUNS = {
         ROOT_DIR / "portability-scoring" / "scoring_engine.py",
         ROOT_DIR / "portability-scoring",
     ),
+    "5": (
+        "Migration viability and planning",
+        ROOT_DIR / "portability-scoring" / "decision_engine.py",
+        ROOT_DIR / "portability-scoring",
+    ),
 }
 
 
@@ -56,6 +61,7 @@ def main():
         print("2. Run dynamic portability analysis")
         print("3. Generate portability summary and graphs")
         print("4. Score sample migration metrics")
+        print("5. Assess migration viability and generate a plan")
         print("0. Exit")
 
         choice = input("Select an option: ").strip()
@@ -66,7 +72,7 @@ def main():
         if choice in SCRIPT_RUNS:
             run_scripts((choice,))
         else:
-            print("Invalid option. Enter a number from 0 to 4.")
+            print("Invalid option. Enter a number from 0 to 5.")
 
 
 if __name__ == "__main__":

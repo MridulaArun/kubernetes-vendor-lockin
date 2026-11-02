@@ -1,5 +1,6 @@
 
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -60,7 +61,7 @@ def calculate_portability_score(metrics):
         except (TypeError, ValueError) as error:
             raise ValueError(f"{input_metric} must be a number") from error
 
-        if value < 0 or value > limits[metric]:
+        if not math.isfinite(value) or value < 0 or value > limits[metric]:
             raise ValueError(
                 f"{input_metric} must be between 0 and {limits[metric]} "
                 f"(got {value:g})"

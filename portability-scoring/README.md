@@ -61,6 +61,35 @@ are still reported.
 An optional `portability_score_percent` is displayed as a stored value. It is
 not used to calculate the formula-based score, so the two scores may differ.
 
+## Migration decision engine
+
+Run `python decision_engine.py` in this directory, or choose option 5 from the
+project's main menu. Select a source and a different destination from AWS EKS,
+Google GKE, Azure AKS, and Kubeadm. The metrics file contains all 12 directed
+migration pairs; self-migrations are not offered. The engine uses the
+formula-calculated portability score and `provider_dependencies` to make a
+deterministic recommendation:
+
+- Recommend staying with the current service when the score is below 20%, or
+  provider dependencies exceed 7 out of 10.
+- Otherwise, recommend migration and print a work estimate and a migration
+  checklist.
+
+The included pair metrics are illustrative planning inputs, not verified
+measurements. The provider-dependency metric is a provisional 0-10 estimate,
+calibrated below the high-lock-in cutoff for these examples; it is not a
+literal count of configuration entries. Replace these example values with
+measurements from your own migration experiments before using the
+recommendation operationally.
+
+The estimate treats the migration time as hands-on person-hours and
+assumes 6 productive hours per engineer per workday. Team size is estimated at
+one engineer per 5 person-days, up to 3 engineers. These are planning
+assumptions, not measured staffing data; update them when project-specific
+effort and team-capacity measurements are available.
+
+Run the unit tests with `python -m unittest discover -s portability-scoring`.
+
 
 \## Next Steps
 
