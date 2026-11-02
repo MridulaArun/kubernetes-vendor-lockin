@@ -3,31 +3,56 @@
     {
         "migration": "AWS EKS to Google GKE",
         "metrics": {
-            "yaml_change_percent": 20,
-            "manual_rewrites": 4,
-            "migration_time_minutes": 30,
-            "failed_deployments": 1,
-            "provider_dependencies": 3
+            "portability_score_percent": 28,
+            "yaml_change_percent": 65,
+            "manual_rewrites": 14,
+            "migration_time_hours": 18,
+            "failed_deployments": 4,
+            "provider_dependencies": 8
         }
     },
     {
         "migration": "Google GKE to Azure AKS",
         "metrics": {
-            "yaml_change_percent": 35,
-            "manual_rewrites": 7,
-            "migration_time_minutes": 45,
+            "portability_score_percent": 15,
+            "yaml_change_percent": 82,
+            "manual_rewrites": 19,
+            "migration_time_hours": 32,
+            "failed_deployments": 7,
+            "provider_dependencies": 9
+        }
+    },
+    {
+        "migration": "Azure AKS to AWS EKS",
+        "metrics": {
+            "portability_score_percent": 20,
+            "yaml_change_percent": 75,
+            "manual_rewrites": 16,
+            "migration_time_hours": 26,
+            "failed_deployments": 5,
+            "provider_dependencies": 10
+        }
+    },
+    {
+        "migration": "Kubeadm baseline to AWS EKS",
+        "metrics": {
+            "portability_score_percent": 45,
+            "yaml_change_percent": 40,
+            "manual_rewrites": 8,
+            "migration_time_hours": 10,
             "failed_deployments": 2,
             "provider_dependencies": 5
         }
     },
     {
-        "migration": "AWS EKS to kubeadm baseline",
+        "migration": "Azure AKS to kubeadm baseline",
         "metrics": {
-            "yaml_change_percent": 15,
-            "manual_rewrites": 2,
-            "migration_time_minutes": 20,
-            "failed_deployments": 0,
-            "provider_dependencies": 2
+            "portability_score_percent": 50,
+            "yaml_change_percent": 35,
+            "manual_rewrites": 6,
+            "migration_time_hours": 8,
+            "failed_deployments": 1,
+            "provider_dependencies": 4
         }
     }
 ]
